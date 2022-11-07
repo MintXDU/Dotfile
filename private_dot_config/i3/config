@@ -43,17 +43,22 @@ exec --no-startup-id pa-applet
 # To start greenclip daemon
 exec --no-startup-id greenclip daemon
 
+# Dunst, by mint, 2022-11-06
+exec --no-startup-id dunst
+
 # Xautolock, by mint 2022-11-04
 exec_always --no-startup-id xautolock -detectsleep -time 3 -locker "i3lock -i $HOME/Beautification/wallpaper/Lock-Wallpaper-HD-For-Desktop.png"
 
 # Polybar-git, by mint 2022-11-04
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# feh wallpaper, by mint 2022-11-04
+# Feh wallpaper, by mint 2022-11-04
 exec_always --no-startup-id feh --randomize --bg-fill ~/Beautification/wallpaper/*.jpg
 
-# picom, making windows transparent, by mint 2022-11-04
+# Picom, making windows transparent, by mint 2022-11-04
 exec_always --no-startup-id picom -b
+
+
 
 
 
@@ -95,6 +100,14 @@ bindsym $mod+b exec --no-startup-id rofi-bluetooth
 # shortcut for ilock, by mint, 2022-11-04
 bindsym $mod+Control+l exec --no-startup-id i3lock -i $HOME/Beautification/wallpaper/Lock-Wallpaper-HD-For-Desktop.png
 
+# shortcut for flameshot, by mint, 2022-11-06
+bindsym $mod+Shift+s exec --no-startup-id flameshot gui
+
+# shortcut for dunst action, by mint, 2022-11-07
+bindsym $mod+z exec --no-startup-id dunstctl action
+
+# shortcut for dunst context, by mint, 2022-11-07
+bindsym $mod+x exec --no-startup-id dunstctl context
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
